@@ -1,5 +1,6 @@
 package hello;
 
+import org.springframework.boot.jackson.JsonObjectDeserializer;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,7 +13,6 @@ import org.springframework.ui.Model;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,6 +53,7 @@ public class UserController {
 			while ((userData = bufferedReader.readLine()) != null) {
 				String[] data = userData.split(",");
 				// TODO Validate Data
+				// Sanitize Data
 				User user = new User(data[0], Double.parseDouble(data[1]));
 				repository.save(user);
 				users.add(user);
