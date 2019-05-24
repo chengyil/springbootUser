@@ -47,4 +47,10 @@ public class HelloWorldConfigurationTests {
         assertEquals(HttpStatus.OK, entity.getStatusCode());
     }
 
+    @Test
+    public void testEmptyUser() throws Exception {
+        ResponseEntity<String> entity = restTemplate
+                .getForEntity("http://localhost:" + this.port + "/users", String.class);
+        assertEquals("[]", entity.getBody());
+    }
 }

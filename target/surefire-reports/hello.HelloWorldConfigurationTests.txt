@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: hello.HelloWorldConfigurationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.675 s - in hello.HelloWorldConfigurationTests
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.606 s <<< FAILURE! - in hello.HelloWorldConfigurationTests
+testEmpty(hello.HelloWorldConfigurationTests)  Time elapsed: 0.313 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[[1]]> but was:<[[]]>
+	at hello.HelloWorldConfigurationTests.testEmpty(HelloWorldConfigurationTests.java:54)
+
