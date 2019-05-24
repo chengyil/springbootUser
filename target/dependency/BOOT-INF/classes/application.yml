@@ -6,7 +6,7 @@ spring:
   application:
     name: TestApp
   datasource:
-    url: jdbc:h2:file:C:/data/demo
+    url: jdbc:h2:file:/tmp/demo
     driverClassName: org.h2.Driver
     username: username
     password: password
